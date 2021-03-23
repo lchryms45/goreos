@@ -1,0 +1,6 @@
+$HOME/.screenlayout/default.sh && sleep 1s && $HOME/.fehbg && polybar top &
+picom --backend glx &
+lxpolkit &
+nm-applet &
+pa-applet &
+xfce4-power-manager &
