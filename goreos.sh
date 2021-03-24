@@ -63,7 +63,7 @@ do
         4)	reboot
         	;;
 		5)
-			clear &&
+			clear
 			;;
     esac
 done
