@@ -4,9 +4,7 @@ cmd=(dialog --keep-tite --menu "GoreOS" 22 76 16)
 
 options=(1 "Main Packages"
          2 "Extra Packages"
-         3 "Configs (Standard Res)"
-         4 "Configs (Low Res)"
-         5 "Configs (9700k)")
+         3 "Config")
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 
@@ -25,13 +23,9 @@ do
             ./goreos.sh
             ;;
 		3)
-            echo "Standard Res"
+            cp -R .config/ $HOME/ &&
+            cp -R .themes $HOME/ &&
+            echo "All done! Congratulations, cunt!"
             ;;
-		4)
-            echo "Low Res"
-            ;;
-		5)
-			echo "9700k"
-			;;
     esac
 done
